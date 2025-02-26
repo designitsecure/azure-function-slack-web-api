@@ -26,7 +26,7 @@ app.http('HttpSlackFunction', {
         }).then(response => {
           context.log(`Slack notification sent`);
         }).catch(error => {
-          context.log(`Error sending slack notification: ${error}`);
+          context.error(`Error sending slack notification: ${error}`);
         });
 
         return { body: `Check slack for message!` };
